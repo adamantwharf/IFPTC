@@ -68,11 +68,11 @@ function preload() {
 }
 var finish = false;
 var song;
-
+var initGame = false;
 function setup() {
   createCanvas(800, 400);
   song.setVolume(0.4);
-  song.loop();
+
   // Create the exploding star sprite and add it's animation
   explode_sprite = createSprite(width / 2, 100, 171, 158);
   explode_sprite.addAnimation('explode', explode_animation);
@@ -99,111 +99,125 @@ var first = false
 
 function draw() {
   clear();
-  //Keydown();
-  if (!finish)
+  if(initGame)
   {
-    background('#81F7D8');
-    if (mouseIsPressed)
-      walk = !walk;
-    if(walk)
-		{
-      player_sprite.changeAnimation('walk');
-      // flip horizontally
-      player_sprite.mirrorX(1);
-      // move right
-      player_sprite.velocity.x = 6;
-      time = 0;
-    }
-    if ( player_sprite.position.x >= 740)
-      win();
-    time ++ ;
-    if(time == 250)
+    if (!finish)
     {
-      state = (state+1)%2;
-      tLight.changeImage(colorsLight[state]);
-      time = 0;
-      if (!first)
+
+      background('#81F7D8');
+      Keydown();
+      if(walk)
+  		{
+        player_sprite.changeAnimation('walk');
+        // flip horizontally
+        player_sprite.mirrorX(1);
+        // move right
+        player_sprite.velocity.x = 6;
+        time = 0;
+      }
+      if ( player_sprite.position.x >= 740)
+        win();
+      time ++ ;
+      if(time == 250)
       {
-        first = true;
-        time = 190;
+        state = (state+1)%2;
+        tLight.changeImage(colorsLight[state]);
+        time = 0;
+        if (!first)
+        {
+          first = true;
+          time = 190;
+        }
+
+      }
+      if (state == 1)
+      {
+          car.remove();
+          car1.remove();
+          flag = false;
+      }
+      else {
+          if(!flag)
+          {
+            car = createSprite(180,300,70,70);
+            car.addImage('redCar',loadImage("assets/car2.png"));
+            car.addImage('purpleCar',loadImage("assets/car2.png"));
+            car.changeImage('purpleCar');
+            car.setCollider('rectangle',0,0,80,70);
+            car1 = createSprite(670,300,70,70);
+            car1.addImage('redCar',loadImage("assets/car1.png"));
+            car1.addImage('purpleCar',loadImage("assets/car1.png"));
+            car1.changeImage('redCar');
+            car1.setCollider('rectangle',0,0,80,70);
+            car1.mirrorX(1);
+            flag = true;
+          }
+          player_sprite.collide(car,die);
+          player_sprite.collide(car1,die);
+          if ( car.position.x > 660 )
+          {
+              car.mirrorX(1);
+              car.changeImage('redCar');
+              car.velocity.x = -10;
+              car1.mirrorX(-1);
+              car1.changeImage('purpleCar');
+              car1.velocity.x = 10;
+          }
+          if (car.position.x <210)
+          {
+            car.mirrorX(-1);
+            car.velocity.x = 10;
+            car.changeImage('purpleCar');
+            car1.mirrorX(1);
+            car1.changeImage('redCar');
+            car1.velocity.x = -10;
+          }
+      }
+      // Draw the ground tiles
+      for (var x = 0; x < 840; x += 70) {
+        if (x >= 140 && x < 700)
+          tile_sprite_sheet.drawFrame('castleMid.png', x, 330);
+        else
+          tile_sprite_sheet.drawFrame('grassMid.png', x, 330);
+      }
+
+      // Draw the sign tiles
+
+      tile_sprite_sheet.drawFrame('ropeVertical.png', 700, 260);
+      tile_sprite_sheet.drawFrame('ropeAttached.png', 700, 190);
+      tile_sprite_sheet.drawFrame('signRight.png', 0, 260);
+
+      //draw the sprite
+        //if debug is set to true bounding boxes, centers and depths are visualized
+      player_sprite.debug = mouseIsPressed;
+      car.debug = mouseIsPressed;
+      explode_sprite.debug =  mouseIsPressed;
+    }
+    else {
+
+
+      if(!flagDie)
+        background('#81F7D8');
+      else {
+        var back = ['#ff0000','#ff0000','#ff0000','#DF0101','#DF0101','#DF0101','#610B0B','#610B0B','#610B0B'];
+        background(back[col]);
+        col ++;
+        col %= 9;
       }
 
     }
-    if (state == 1)
-    {
-        car.remove();
-        car1.remove();
-        flag = false;
-    }
-    else {
-        if(!flag)
-        {
-          car = createSprite(180,300,70,70);
-          car.addImage('redCar',loadImage("assets/car2.png"));
-          car.addImage('purpleCar',loadImage("assets/car2.png"));
-          car.changeImage('purpleCar');
-          car.setCollider('rectangle',0,0,80,70);
-          car1 = createSprite(670,300,70,70);
-          car1.addImage('redCar',loadImage("assets/car1.png"));
-          car1.addImage('purpleCar',loadImage("assets/car1.png"));
-          car1.changeImage('redCar');
-          car1.setCollider('rectangle',0,0,80,70);
-          car1.mirrorX(1);
-          flag = true;
-        }
-        player_sprite.collide(car,die);
-        player_sprite.collide(car1,die);
-        if ( car.position.x > 660 )
-        {
-            car.mirrorX(1);
-            car.changeImage('redCar');
-            car.velocity.x = -10;
-            car1.mirrorX(-1);
-            car1.changeImage('purpleCar');
-            car1.velocity.x = 10;
-        }
-        if (car.position.x <210)
-        {
-          car.mirrorX(-1);
-          car.velocity.x = 10;
-          car.changeImage('purpleCar');
-          car1.mirrorX(1);
-          car1.changeImage('redCar');
-          car1.velocity.x = -10;
-        }
-    }
-    // Draw the ground tiles
-    for (var x = 0; x < 840; x += 70) {
-      if (x >= 140 && x < 700)
-        tile_sprite_sheet.drawFrame('castleMid.png', x, 330);
-      else
-        tile_sprite_sheet.drawFrame('grassMid.png', x, 330);
-    }
-
-    // Draw the sign tiles
-
-    tile_sprite_sheet.drawFrame('ropeVertical.png', 700, 260);
-    tile_sprite_sheet.drawFrame('ropeAttached.png', 700, 190);
-    tile_sprite_sheet.drawFrame('signRight.png', 0, 260);
-
-    //draw the sprite
-      //if debug is set to true bounding boxes, centers and depths are visualized
-    player_sprite.debug = mouseIsPressed;
-    car.debug = mouseIsPressed;
-    explode_sprite.debug =  mouseIsPressed;
   }
   else {
-
-
-    if(!flagDie)
-      background('#81F7D8');
-    else {
-      var back = ['#ff0000','#ff0000','#ff0000','#DF0101','#DF0101','#DF0101','#610B0B','#610B0B','#610B0B'];
-      background(back[col]);
-      col ++;
-      col %= 9;
+    background('#81F7D8');
+    textAlign(CENTER);
+  	textSize(50);
+  	fill(0,0,0);
+  	text("Click Para empezar",width/2,height/2);
+    if(mouseIsPressed)
+    {
+        initGame = true;
+        song.loop();
     }
-
   }
   drawSprites();
 }
@@ -235,34 +249,16 @@ win = function()
   finish  = true;
   winS.play();
   explode_sprite.remove();
+  song.stop();
   //tile_sprite_sheet.removeFrames()
 
 }
 Keydown = function()
 {
-		if(keyIsDown(RIGHT_ARROW))
+		if(keyIsDown(68))
 		{
-      player_sprite.changeAnimation('walk');
-      // flip horizontally
-      player_sprite.mirrorX(1);
-      // move right
-      player_sprite.velocity.x = 6;
+      walk = true;
     }
-		if(keyIsDown(LEFT_ARROW))
-		{
-        player_sprite.changeAnimation('walk');
-        // flip horizontally
-        player_sprite.mirrorX(-1);
-        // move left
-        player_sprite.velocity.x = - 6;
-    }
-
-		if(!keyIsDown(RIGHT_ARROW) && !keyIsDown(LEFT_ARROW))
-		{
-			  player_sprite.changeAnimation('stand');
-        //if close to the mouse, don't move
-        player_sprite.velocity.x = 0;
-		}
 
 		return false;
 

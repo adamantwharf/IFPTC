@@ -84,7 +84,7 @@ More information on [Wikipedia](https://en.wikipedia.org/wiki/Space_Invaders) <!
 V:
 #### <font color="red">Galaga Running! </font>
 <!-- .slide: data-background="#000000"  -->
-<iframe src="sketches/trafficLight.html" width="800" height="400" align="center">
+<iframe src="sketches/trafficLight.html" width="1000" height="600" align="center">
 
 H:
 
