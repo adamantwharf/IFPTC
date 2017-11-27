@@ -87,11 +87,14 @@ V:
 H:
 
 ##   <font color="red">¿Qué boton pulsarías? </font>
+<!-- .slide: data-background="images/back.png"  -->
 <img src="images/jugar.png" width = 270 height = 100</img>
 <img src="images/salir.png" width = 270 height = 100></img>
 
-<!-- .slide: data-background="images/back.png"  -->
 
+V:
+Recuerda este ejercicio, ¿Qué debería pasar si oprimes la tecla 'D'?
+<iframe src="sketches/clic.html" width="1000" height="600" align="center">
 
 
 V:

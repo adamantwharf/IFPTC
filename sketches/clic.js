@@ -41,9 +41,6 @@ function preload() {
   //
   //    Below demonstrates both methods:
 
-  song = loadSound('Sounds/FunLoop.mp3');
-  winS = loadSound('Sounds/TaDa.mp3');
-  crash = loadSound('Sounds/crash.wav');
   // Load the json for the tiles sprite sheet
   tile_frames = loadJSON('assets/tiles.json');
 
@@ -93,37 +90,7 @@ function draw() {
   text("Veamos que pasa si haces clic aqui",width/2,height/2);
 }
 var flagDie = false;
-die = function()
-{
-//  console.log("asfdsaf");
-  song.stop();
-  crash.play();
-  car.remove();
-  car1.remove();
-  player_sprite.remove()
-  tLight.remove();
-  explode_sprite.remove();
-  finish  = true;
-  flagDie = true;
-  //tile_sprite_sheet.removeFrames()
 
-}
-win = function()
-{
-  var  win = createSprite ( width/2,height/2,10,10);
-  win.addImage(loadImage("assets/win.png"));
-  drawSprite(win);
-  car.remove();
-  car1.remove();
-  tLight.remove();
-  player_sprite.remove()
-  finish  = true;
-  winS.play();
-  explode_sprite.remove();
-  song.stop();
-  //tile_sprite_sheet.removeFrames()
-
-}
 Keydown = function()
 {
 		if(keyIsDown(68))
