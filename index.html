@@ -4,7 +4,7 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>reveal.js - The HTML Presentation Framework</title>
+		<title>Aprendiendo y Jugando</title>
 
 		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
 		<meta name="author" content="Hakim El Hattab">
@@ -15,7 +15,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
 
 		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+		<link rel="stylesheet" href="css/theme/sky.css" id="theme">
 
 		<!-- Code syntax highlighting -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
@@ -39,34 +39,24 @@
                 <div class="reveal">
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
-			<section    data-markdown="source.md"  
-                                    data-separator="^H:"  
-                                    data-separator-vertical="V:"  
-                                    data-separator-notes="^N:"  
+			<section    data-markdown="source.md"
+                                    data-separator="^H:"
+                                    data-separator-vertical="V:"
+                                    data-separator-notes="^N:"
                                     data-charset="utf-8">
                         </section>
                         </div>
                 </div>
-                
-                <script src="sketches/Libraries/p5.js"> </script>
-                <script src="sketches/Libraries/p5.dom.js"> </script>  
-                <script src="sketches/Libraries/p5.sound.js"> </script>    
-                <script src="sketches/Libraries/p5.play.js"></script>  
-                <script src="Libraries/jquery.min.js"></script> 
+
+                <script src="sketches/lib/p5.js"> </script>
+                <script src="sketches/lib/p5.dom.js"> </script>
+                <script src="sketches/lib/p5.sound.js"> </script>
+                <script src="sketches/lib/p5.play.js"></script>
+                <script src="Libraries/lib.min.js"></script>
 		<script src="lib/js/head.min.js"></script>
 		<script src="js/reveal.js"></script>
                 <script src="sketches/Games.js"></script>
-                <script src="sketches/Games/bounce.js" ></script>
-                <script src="sketches/Games/cloud.js" ></script>
-                <script src="sketches/Games/colors.js" ></script>
-                <script src="sketches/Games/galaga.js" ></script>
-                <script src="sketches/Games/stick.js" ></script>
-                <script src="sketches/Bounce.js" ></script>
-                <script src="sketches/Cloud.js" ></script>
-                <script src="sketches/Colors.js" ></script>
-                <script src="sketches/Galaga.js" ></script>
-                <script src="sketches/Stick.js" ></script>
-	
+
 		<script>
 
 			// Full list of configuration options available at:
@@ -78,7 +68,7 @@
 				center: true,
 
 				transition: 'slide', // none/fade/slide/convex/concave/zoom
-				
+
 				//added by Pierre
 				math: {
                                         mathjax: 'http://cdn.mathjax.org/mathjax/latest/MathJax.js',

@@ -18,72 +18,66 @@
 
 H:
 
-# ** FUTURE GAMES **
+# ** Condicionales para ninos (mejorar nombre) **
 
-by  [Sebastian Chaves](https://github.com/adamantwharf) - [Laura Santos](https://github.com/lsfinite) - [Jimmy Pulido](https://github.com/jiapulidoar)
-I
-H:
-
-# Index
-
-<!-- .slide: data-background="#7E2121" -->
- 1. The main idea  <!-- .element: class="fragment" data-fragment-index="1"-->
- 1. The way we did it <!-- .element: class="fragment" data-fragment-index="2"-->
- 1. The Games <!-- .element: class="fragment" data-fragment-index="3"-->
- 1. References <!-- .element: class="fragment" data-fragment-index="4"-->
-H:
-
-# *The main idea*
-<!-- .slide: data-background="#005050" -->
-V:
-
- ## What is it about?
-
-  >The idea of the game was creat a serie of mini games. Easy to play, easy to lose.This will become attractive to the player, so she/he will play it again and again.  
-  *Do you wanna play it?* <!-- .element: class="fragment" data-fragment-index="2"-->
-V:
-## Mini Games?:
-Yeap, we have made five of them, so you can play the one you consider more interesting.
-<!-- .element: class="fragment" data-fragment-index="1"-->
-
-Just see the squares...  <!-- .element: class="fragment" data-fragment-index="2"-->
-
-**And make your choice!!!** <!-- .element: class="fragment" data-fragment-index="3"-->
-V:
-## Objectives
-* Short Term = Have a lot of video games. And try to join them as one big game that is design for include the mini games.
-* Long Term = Make a complete game plataform. For pc ( Windows, Unix systems, GNU ), mobile devices ( android ) and of course the Web.
+Por  [Sebastian Chaves](https://github.com/adamantwharf)
 
 H:
-# *The way we did it *:
-Each one of the games is a class, and Games, is the super class.  
-<img src="UML.png"> </img>
+
+##<font color=#9179C1>¿Sabes qué es programar? </font>
+
+<img src="images/kidsCompt.jpg" width=300 height=270></img>
+
+><font color=#1C122E>Darle instrucciones al computador para que haga algo </font> <!-- .element: class="fragment" data-fragment-index="1"-->
+
+
+H:
+
+## <font color=#9179C1>Por ejemplo puedes hacer:</font>
+
+
+V:
+
+##<font color=#9179C1>Juegos </font>
+<img src="images/juego.jpg" ></img>
+
+V:
+
+##<font color=#9179C1>Paginas de Internet </font>
+<img src="images/google.png" ></img>
+V:
+
+##<font color=#9179C1>Y muchas cosas más... </font>
+<img src="images/comp.jpg" width=600 height=500></img>
 
 
 
 H:
-# *The Games*
+## <font color=#9179C1>*¿Sabías qué el computador toma desiciones?*</font>
 
-* Galaga
-
-* Clouds
-
-* Sticks
-
-* Colors
-
-* Bounce
+>El computador puede responder SI o NO antes de realizar una instrucción
 
 V:
-### Galaga
-<!-- .slide: data-background="#7E2121"  -->
-  >A version of the clasic game. Is an arcade video game developed by Tomohiro Nishikado and released in 1978 <!-- .element: class="fragment" data-fragment-index="1"-->
+<font color=#9179C1>Aquí el computador se está preguntando ¿Estás haciendo clic en la pantalla?</font>
 
-More information on [Wikipedia](https://en.wikipedia.org/wiki/Space_Invaders) <!-- .element: class="fragment" data-fragment-index="1"-->
+<iframe src="sketches/clic.html" width="1000" height="600" align="center">
 
 V:
-#### <font color="red">Galaga Running! </font>
-<!-- .slide: data-background="#000000"  -->
+
+H:
+# <font color=#9179C1>*Es tu turno*</font>
+
+>Ahora tu debes tomar una decisión antes de realizar una instrucción
+
+V:
+###  <font color=#9179C1>¿Cuándo debo cruzar la calle?</font>
+
+>Oprime la tecla 'D' cuando creas que debes cruzar la calle
+
+
+V:
+#### <font color="red">Piensa con cuidado! </font>
+
 <iframe src="sketches/trafficLight.html" width="1000" height="600" align="center">
 
 H:
