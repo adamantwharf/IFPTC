@@ -63,7 +63,7 @@ V:
 <iframe src="sketches/clic.html" width="1000" height="600" align="center">
 
 V:
-
+Si la respuesta es SI, el computador realiza la acción
 H:
 # <font color=#9179C1>*Es tu turno*</font>
 
