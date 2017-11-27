@@ -63,11 +63,15 @@ V:
 <iframe src="sketches/clic.html" width="1000" height="600" align="center">
 
 V:
+<<<<<<< HEAD
 
 ##<font color=#9179C1>Cuando haces clic</font>
 
 >##<font color=#9179C1>	El computador realiza la acción</font>
 
+=======
+Si la respuesta es SI, el computador realiza la acción
+>>>>>>> 556a125ee0c9a4a87972e0997c6e8fee018a31f5
 H:
 # <font color=#9179C1>*Es tu turno*</font>
 
