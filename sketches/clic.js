@@ -90,7 +90,7 @@ function draw() {
   textAlign(CENTER);
   textSize(30);
   fill(0,0,0);
-  text("Clic aca para cambiar de color",width/2,height/2);
+  text("Veamos que pasa si haces clic aqui",width/2,height/2);
 }
 var flagDie = false;
 die = function()

@@ -64,6 +64,10 @@ V:
 
 V:
 
+##<font color=#9179C1>Cuando haces clic</font>
+
+>##<font color=#9179C1>	El computador realiza la acción</font>
+
 H:
 # <font color=#9179C1>*Es tu turno*</font>
 
@@ -72,7 +76,7 @@ H:
 V:
 ###  <font color=#9179C1>¿Cuándo debo cruzar la calle?</font>
 
->Oprime la tecla 'D' cuando creas que debes cruzar la calle
+>Oprime la tecla con la letra 'D' cuando creas que debes cruzar la calle
 
 
 V:
@@ -82,9 +86,8 @@ V:
 
 H:
 
-## Now Available for web:  
+##   <font color="red">Piensa con cuidado! </font>
 
-<font color="black"> http:// futureun.github.io/FutureGame </font>
 <!-- .slide: data-background="#2E9AFE"  -->
 
 
