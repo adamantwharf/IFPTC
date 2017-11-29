@@ -36,16 +36,16 @@ H:
 ## <font color=#9179C1>Por ejemplo puedes hacer:</font>
 
 
-V:
+H:
 
 ##<font color=#9179C1>Juegos </font>
 <img src="images/juego.jpg" ></img>
 
-V:
+H:
 
 ##<font color=#9179C1>Paginas de Internet </font>
 <img src="images/google.png" ></img>
-V:
+H:
 
 ##<font color=#9179C1>Y muchas cosas más... </font>
 <img src="images/comp.jpg" width=600 height=500></img>
@@ -57,12 +57,12 @@ H:
 
 >El computador puede responder SI o NO antes de realizar una instrucción
 
-V:
+H:
 <font color=#9179C1>Aquí el computador se está preguntando ¿Estás haciendo clic en la pantalla?</font>
 
 <iframe src="sketches/clic.html" width="1000" height="600" align="center">
 
-V:
+H:
 
 ##<font color=#9179C1>Cuando haces clic</font>
 
@@ -73,13 +73,13 @@ H:
 
 >Ahora tu debes tomar una decisión antes de realizar una instrucción
 
-V:
+H:
 ###  <font color=#9179C1>¿Cuándo debo cruzar la calle?</font>
 
 >Oprime la tecla con la letra 'D' cuando creas que debes cruzar la calle
 
 
-V:
+H:
 #### <font color="red">Piensa con cuidado! </font>
 
 <iframe src="sketches/trafficLight.html" width="1000" height="600" align="center">
@@ -92,12 +92,12 @@ H:
 <img src="images/salir.png" width = 270 height = 100></img>
 
 
-V:
+H:
 Recuerda este ejercicio, ¿Qué debería pasar si oprimes la tecla 'D'?
 <iframe src="sketches/clic.html" width="1000" height="600" align="center">
 
 
-V:
+H:
 ## References
 
 * [P5*JS](http://p5js.org/)
