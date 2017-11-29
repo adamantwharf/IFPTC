@@ -7,3 +7,5 @@ La finalidad del trabajo es realizar una plataforma para inculcar conceptos basi
 El enlace del material realizado es https://adamantwharf.github.io/IFPTC/#/1
 
 Para utilizar el material se desplaza entre diapositivas utilizando las flechas del teclado, luego de realizar un ejercicio en las presentaciones se debe hacer clic fuera del cuadro del ejercicio para poder controlar las diapositivas de nuevo
+
+Si se llega la diapositiva que tiene como titulo Piensa con cuidado! y no carga el juego se debe oprimir la tecla f5 para que cargue el juego de nuevo
